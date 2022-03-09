@@ -1,0 +1,91 @@
+package pratica4;
+
+public class prac4 
+{	public static void main(String[] args) {
+        Mexicano[] persona = new Mexicano[2];
+
+        for(int i=0;i<2;i++) {
+            System.out.println("Mexicano " + (i+1));
+            persona[i] = new Mexicano();
+        }
+        System.out.println("CURP: " + persona[0].getCURP());
+        System.out.println("RFC: " + persona[1].getRFC());
+        System.out.println("CURP y RFC : "+ persona[1].getCURP() + "\n Y "+ persona[1].getRFC());
+    }   
+}
+
+package pratica4;
+import java.util.Random;
+
+public class Mexicano {
+    String nombre, nombres, apellidop, apellidom;
+    char sexo;
+    int dia, mes, anio;
+    String CURP, RFC;
+
+    public Mexicano() {
+        setNomb(CapturaEntrada.capturarCadena("Nombre"));
+        setNomb1(CapturaEntrada.capturarCadena("Segundo nombre"));
+        setAp(CapturaEntrada.capturarCadena("Apellido paterno"));
+        setAm(CapturaEntrada.capturarCadena("Apellido materno"));
+        setSexo(CapturaEntrada.capturarCadena("Sexo").charAt(0)); 
+        setDia(CapturaEntrada.capturarEntero("Dia"));
+        setMes(CapturaEntrada.capturarEntero("Mes"));
+        setYr(CapturaEntrada.capturarEntero("Anio"));
+        generarCURP(generar());
+        generarRFC(generar());
+    }
+    public void setNom(String nombre) {
+        this.nombre = nomb;
+    }
+    public String getNomb() {
+        return Nom;
+    }
+    public void setNomb1(String nombres) {
+       this.nombres = nom1;
+    }
+    public String getNomb1() {
+        return nomb1;
+    }
+    public void setAp(String apellidop) {
+        this.apellidop = AP;
+    }
+    public String getAP() {
+        return AP;
+    }
+
+    public void setAm(String apellidom) {
+        this.apellidom = AM;
+    }
+    public String getAM() {
+        return AM;
+    }
+    public void setSexo(char sexo) {
+        this.sexo = sexo;
+    }
+    public char getSexo() {
+        return sexo;
+    }
+    public void setDia(int dia) {
+        this.dia = dia;
+    }
+    public int getDia() {
+        return dia;
+    }
+    public void setMes(int mes) {
+        this.mes = mes;
+    }
+        public int getMes() {
+        return mes;
+    }
+    public void setanio(int anio) {
+        this.anio = anio;
+    }
+    public int getAnio() {
+        return anioo;
+    }
+
+    public void hacerCURP(String nombre, String apellidop, String apellidom) {
+        System.out.printf("\nCURP: " + this.apellidop.charAt(0) + this.apellidom.charAt(0) + this.nombre.charAt(0) + this.yr + this.mes + this.dia);
+        }
+}
